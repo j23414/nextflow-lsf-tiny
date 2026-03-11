@@ -42,7 +42,7 @@ Succeeded   : 6
 nextflow run main.nf \
   --infiles "data/*.txt" \
   -with-timeline timeline_hpc.html \
-  -profile stjude
+  -config stjude.config
 ```
 
 **Pull from GitHub and Run**
