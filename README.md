@@ -6,7 +6,9 @@ Reuse St Jude executor config: https://nf-co.re/configs/stjude/
 **Local Run**
 
 ```bash
-nextflow run main.nf --infiles "data/*.txt" -with-timeline timeline.html
+nextflow run main.nf \
+  --infiles "data/*.txt" \
+  -with-timeline timeline.html
 ```
 
 Which prints out:
@@ -37,5 +39,8 @@ Succeeded   : 6
 **LSF HPC Run**
 
 ```bash
-nextflow run main.nf --infiles "data/*.txt" -with-timeline timeline.html -profile stjude
+nextflow run main.nf \
+  --infiles "data/*.txt" \
+  -with-timeline timeline_hpc.html \
+  -profile stjude
 ```
