@@ -30,6 +30,10 @@ CPU hours   : 0.1
 Succeeded   : 6
 ```
 
+**timeline.html**
+
+![timeline](imgs/timeline.png)
+
 **LSF HPC Run**
 
 ```bash
