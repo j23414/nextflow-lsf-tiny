@@ -44,3 +44,17 @@ nextflow run main.nf \
   -with-timeline timeline_hpc.html \
   -profile stjude
 ```
+
+**Pull from GitHub and Run**
+
+```bash
+mkdir data
+echo "alice" > data/alice.txt
+echo "bob" > data/bob.txt
+echo "charlie" > data/charlie.txt
+
+nextflow run j23414/nextflow-lsf-tiny \
+  -r main \
+  --infiles "data/*.txt" \
+  -with-timeline timeline.html
+```
