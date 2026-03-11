@@ -2,7 +2,7 @@ params.infiles = "*.txt"
 params.outdir = "results"
 
 process ADD_GREETING {
-    publishDir "${params.outdir}", mode: "copy"
+    publishDir "${params.outdir}/debug", mode: "copy"
     input: path(infile)
     output: path("${infile}_greeting.txt")
 
@@ -14,11 +14,25 @@ process ADD_GREETING {
     """
 }
 
+process ADD_FAREWELL {
+    publishDir "${params.outdir}/", mode: "copy"
+    input: path(infile)
+    output: path("${infile}_letter.txt")
+
+    script:
+    """
+    cat ${infile} >> "${infile}_letter.txt"
+    sleep 50
+    echo "Goodbye!" > "${infile}_letter.txt"
+    """
+}
+
 workflow {
     main:
     ch_infiles = channel.fromPath(params.infiles)
 
     ch_infiles
     | ADD_GREETING
+    | ADD_FAREWELL
     | view
 }
