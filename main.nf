@@ -4,26 +4,26 @@ params.outdir = "results"
 process ADD_GREETING {
     publishDir "${params.outdir}/debug", mode: "copy"
     input: path(infile)
-    output: path("${infile}_greeting.txt")
+    output: path("${infile.baseName}_greeting.txt")
 
     script:
     """
-    echo "Hello," > "${infile}_greeting.txt"
+    echo "Hello," > "${infile.baseName}_greeting.txt"
     sleep 100
-    cat ${infile} >> "${infile}_greeting.txt"
+    cat ${infile} >> "${infile.baseName}_greeting.txt"
     """
 }
 
 process ADD_FAREWELL {
     publishDir "${params.outdir}/", mode: "copy"
     input: path(infile)
-    output: path("${infile}_letter.txt")
+    output: path("${infile.baseName}_letter.txt")
 
     script:
     """
-    cat ${infile} >> "${infile}_letter.txt"
+    cat ${infile} >> "${infile.baseName}_letter.txt"
     sleep 50
-    echo "Goodbye!" > "${infile}_letter.txt"
+    echo "Goodbye!" > "${infile.baseName}_letter.txt"
     """
 }
 

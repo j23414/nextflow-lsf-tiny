@@ -15,16 +15,16 @@ Which prints out:
 
  N E X T F L O W   ~  version 25.10.4
 
-Launching `main.nf` [magical_torvalds] DSL2 - revision: 53b80e830e
+Launching `main.nf` [berserk_snyder] DSL2 - revision: fefaf60a91
 
 executor >  local (6)
-[bd/a77495] ADD_GREETING (3) [100%] 3 of 3 ✔
-[5c/77e054] ADD_FAREWELL (2) [100%] 3 of 3 ✔
-/Users/jchang99/github/j23414/nextflow-lsf-tiny/work/06/c746a151f3a2946dcd535d4fb7d28a/charlie.txt_greeting.txt_letter.txt
-/Users/jchang99/github/j23414/nextflow-lsf-tiny/work/06/8666d72d9abb161a22e6d18482d0bc/alice.txt_greeting.txt_letter.txt
-/Users/jchang99/github/j23414/nextflow-lsf-tiny/work/5c/77e0547b58023dd161933a0652d749/bob.txt_greeting.txt_letter.txt
+[4b/e68756] ADD_GREETING (1) [100%] 3 of 3 ✔
+[33/8d96f7] ADD_FAREWELL (3) [100%] 3 of 3 ✔
+/Users/jchang99/github/j23414/nextflow-lsf-tiny/work/5a/9dbdfba1fd007483db24b43b3ee9e1/bob_greeting_letter.txt
+/Users/jchang99/github/j23414/nextflow-lsf-tiny/work/15/07950d05821bdca2e3e6937b968ff1/charlie_greeting_letter.txt
+/Users/jchang99/github/j23414/nextflow-lsf-tiny/work/33/8d96f76ff693ea486760bf1820af0b/alice_greeting_letter.txt
 
-Completed at: 11-Mar-2026 10:49:02
+Completed at: 11-Mar-2026 11:20:17
 Duration    : 2m 31s
 CPU hours   : 0.1
 Succeeded   : 6
