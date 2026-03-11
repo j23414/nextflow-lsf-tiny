@@ -36,15 +36,6 @@ Succeeded   : 6
 
 ![timeline](imgs/timeline.png)
 
-**LSF HPC Run**
-
-```bash
-nextflow run main.nf \
-  --infiles "data/*.txt" \
-  -with-timeline timeline_hpc.html \
-  -config stjude.config
-```
-
 **Pull from GitHub and Run**
 
 ```bash
@@ -58,3 +49,22 @@ nextflow run j23414/nextflow-lsf-tiny \
   --infiles "data/*.txt" \
   -with-timeline timeline.html
 ```
+
+**LSF HPC Run**
+
+```bash
+nextflow run main.nf \
+  --infiles "data/*.txt" \
+  -with-timeline timeline_hpc.html \
+  -config stjude.config
+```
+
+Or submit to LSF with
+
+```bash
+bsub < submit_job.lsf
+```
+
+**timeline_hpc.html**
+
+![timeline](imgs/timeline_hpc.png)
