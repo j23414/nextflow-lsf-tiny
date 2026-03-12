@@ -4,6 +4,8 @@
 #BSUB -o out.%J
 #BSUB -e err.%J
 #BSUB -J NXFL_TINY
+#BSUB -N
+####BSUB -u username@stjude.org
 
 # Please do not remove this line
 source /etc/bashrc.modules
